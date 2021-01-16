@@ -1,0 +1,8 @@
+<label class='subTitle'>Editor</label>
+<br>
+<div>
+  <label style='font-size: 1.1rem;'>Blogs pending to check:</label>
+  <div style="color: blue; cursor: pointer;" *ngFor='let blogToCheck of blogsToCheckList' (click)='onBlog(blogToCheck)'>
+    {{ blogToCheck.title }}
+  </div>
+</div>

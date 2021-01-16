@@ -1,0 +1,16 @@
+<label class='subTitle'>Writer</label>
+<br>
+<input style='float: right' type='button' value='Create' (click)='onCreate()'>
+<div>
+  <label style='font-size: 1.1rem;'>Blogs in creation:</label>
+  <div style="color: blue; cursor: pointer;" *ngFor='let blogInCreation of blogsInCreationList' (click)='onBlog(blogInCreation)'>
+    {{ blogInCreation.title }}
+  </div>
+</div>
+<br>
+<div>
+  <label style='font-size: 1.1rem;'>Blogs rejected:</label>
+  <div style="color: blue; cursor: pointer;" *ngFor='let blogRejected of blogsRejectedList' (click)='onBlog(blogRejected)'>
+    {{ blogRejected.title }}
+  </div>
+</div>

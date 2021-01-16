@@ -1,0 +1,5 @@
+<label class='subTitle'>Published blogs:</label>
+<br>
+<div style="color: blue; cursor: pointer;" *ngFor='let publishedBlog of publishedBlogList' (click)='onBlog(publishedBlog)'>
+  {{ publishedBlog.title }} by {{ publishedBlog.author.person.name }}
+</div>
