@@ -6,6 +6,7 @@ BlogEngine application has been already deployed, you can access it through the 
 https://blog-engine-fe.azurewebsites.net
 
 There are two user availables, which are:
+
 	User: shakespeare@yahoo.com
 	Password: 123456
 	Role: writer
@@ -31,21 +32,22 @@ Database:
         - Execute scripts accord enum located in './database-scripts\data'
 
 Backend:
-    - Prerequisite: Framework .NET CORE 5.0
-    - On visual studio 2019 or superior
-        - Open the solution 'ZemogaBlogEngine.sln' located in back-end folder
-        - Change the connection string information accord to your database credentials in './DataAccess/CommonDA.cs'
-        - Check and adjust CORS configuration whether is nedded
-        - Make sure that your startup project in the solution is "WebApplication"
-        - Build the solution (through ctrl + shit + b)
-        - Execute the solution (through F5)
+1. Prerequisite: Framework .NET CORE 5.0
+2. On visual studio 2019 or superior
+    - Open the solution 'ZemogaBlogEngine.sln' located in back-end folder
+    - Change the connection string information accord to your database credentials in './DataAccess/CommonDA.cs'
+    - Check and adjust CORS configuration whether is nedded
+    - Make sure that your startup project in the solution is "WebApplication"
+    - Build the solution (through ctrl + shit + b)
+    - Execute the solution (through F5)
 
 Frontend:
-    - Prerequisite: NodeJS 14.15.4
-    - On visual studio code
-        - Open the front-end application located in './front-end'
-        - Check and adjust the value of the parameter 'blogEngineWS' accord to your needs, in './src/environments' file. The value must contain the URL of the back end application.
-    - On project folder './front-end' open power shell and execute 'npm install' to install the packages needed for the front-end application
+1. Prerequisite: NodeJS 14.15.4
+2. On visual studio code
+    - Open the front-end application located in './front-end'
+    - Check and adjust the value of the parameter 'blogEngineWS' accord to your needs, in './src/environments' file. The value must contain the URL of the back end application.
+3. On project folder './front-end' open power shell
+    - Execute 'npm install' to install the packages needed for the front-end application
     - In order to run the application execute 'npm run start'
 
 
