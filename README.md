@@ -16,20 +16,20 @@ There are two user availables, which are:
 	Role: editor
 	
 Note: Some information has been preloaded. Such as:
-	Blogs in creation
-	Blogs pending to check
-	Blogs rejected
-	Blogs approved
+- Blogs in creation
+- Blogs pending to check
+- Blogs rejected
+- Blogs approved
 
 
 # Getting Started
 Whether you want to execute the application locally. Please follow the next steps:
 
 Database:
-    - Prerequisite: Sql server 2019 or superior
-    - On SSMS (Sql server management studio)
-        - Execute scripts accord enum located in './database-scripts\schema'
-        - Execute scripts accord enum located in './database-scripts\data'
+1. Prerequisite: Sql server 2019 or superior
+2. On SSMS (Sql server management studio)
+    - Execute scripts accord enum located in './database-scripts\schema'
+    - Execute scripts accord enum located in './database-scripts\data'
 
 Backend:
 1. Prerequisite: Framework .NET CORE 5.0
