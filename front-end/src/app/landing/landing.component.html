@@ -1,0 +1,11 @@
+<label style='cursor: pointer;' class='title' routerLink='./'>Zemoga Blog Engine</label>
+<input style='float: right;' type='button' [value]="employee ? 'Logout' : 'Login'" (click)='onLogin()'>
+<div *ngIf='employee'>
+  <label>Name: {{ employee.Person.Name }}</label>
+  <br>
+  <label>Role: </label>
+  <input type='button' [value]='employee.Role.Description'
+    [routerLink]="employee.Role.Id === '6B700700-BFF1-44C8-AB03-24C16E21BD40' ? './writer' : './editor'">
+</div>
+<hr>
+<router-outlet></router-outlet>

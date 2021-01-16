@@ -1,0 +1,47 @@
+<label class='subTitle'>Blog</label>
+<form [formGroup]='blogForm' (ngSubmit)='onSubmit()'>
+  <div>
+    <label>^ Author </label>
+    <input formControlName='author'>
+    <br>
+    <label class='error' *ngIf="blogForm.get('author')?.touched && !blogForm.get('author')?.valid">
+      Invalid author
+    </label>
+  </div>
+  <div>
+    <label>* Title </label>
+    <input style='width: 100%;' formControlName='title'>
+    <br>
+    <label class='error' *ngIf="blogForm.get('title')?.touched && !blogForm.get('title')?.valid">
+      Invalid title
+    </label>
+  </div>
+  <div>
+    <label>* Article </label>
+    <textarea formControlName='article'></textarea>
+    <br>
+    <label class='error' *ngIf="blogForm.get('article')?.touched && !blogForm.get('article')?.valid">
+      Invalid article
+    </label>
+  </div>
+  <div>
+    <label>^ Publish date </label>
+    <input style='width: 28rem;' formControlName='publishDate'>
+    <br>
+    <label class='error' *ngIf="blogForm.get('publishDate')?.touched && !blogForm.get('publishDate')?.valid">
+      Invalid publish date
+    </label>
+  </div>
+  <br>
+  <div *ngIf="employee && employee.Role.Id === '6B700700-BFF1-44C8-AB03-24C16E21BD40'">
+    <input *ngIf="action === 'create' || action === 'update'" style='float: right;' type='submit' [value]="action === 'create' ? 'Save' : 'Update'">
+    <input *ngIf="action === 'update'" style='float: right;' type='button' value='Submit' (click)='onSubmitBlog()'>
+  </div>
+  <div *ngIf="employee && employee.Role.Id === '48225690-4F58-4838-8042-4BA174A8D3A8'">
+    <input style='float: right;' type='button' value='Delete' (click)='onDeleteBlog()'>
+    <input *ngIf="blog.state.id.toUpperCase() === 'A69053BE-6343-4EF3-82A9-56A1E4EFBA1D'" style='float: right;' type='button'
+      value='Reject' (click)='onRejectBlog()'>
+    <input *ngIf="blog.state.id.toUpperCase() === 'A69053BE-6343-4EF3-82A9-56A1E4EFBA1D'" style='float: right;' type='button'
+      value='Approve' (click)='onApproveBlog()'>
+  </div>
+</form>
