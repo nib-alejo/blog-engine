@@ -1,0 +1,7 @@
+﻿CREATE TABLE [per].[Person] (
+    [Id]    UNIQUEIDENTIFIER NOT NULL,
+    [Name]  VARCHAR (100)    NOT NULL,
+    [Email] VARCHAR (50)     NOT NULL,
+    CONSTRAINT [PK_Person] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
